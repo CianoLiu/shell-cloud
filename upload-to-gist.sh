@@ -51,7 +51,7 @@ fi
 string_content=$(jq -Rs '.' < "$FILE_PATH")
 
 # 构造请求体
-gist_data="{\"files\": {\"$FILENAME\": {\"content\": $json_content}}}"
+gist_data="{\"files\": {\"$FILENAME\": {\"content\": $string_content}}}"
 
 # 发送请求
 response=$(curl -s -H "Authorization: token ${TOKEN}" -H "Accept: application/vnd.github+json" -X PATCH -d "$gist_data" "https://api.github.com/gists/${GIST_ID}")
