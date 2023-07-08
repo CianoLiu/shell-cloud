@@ -13,8 +13,11 @@
 #   - GIST_ID：Gist 的唯一标识符。如果留空，则创建一个新的 Gist。
 #   - FILENAME：要上传的文件名。如果留空，则从 FILE_PATH 中提取。
 
+# 禁用 proxy
+unset http_proxy https_proxy all_proxy
+
 # 安装依赖
-curl -o apt-get-update.sh https://raw.githubusercontent.com/CianoLiu/shell-cloud/main/apt-get-update.sh
+curl -o apt-get-update.sh https://ghproxy.com/https://raw.githubusercontent.com/CianoLiu/shell-cloud/main/apt-get-update.sh
 chmod +x apt-get-update.sh
 ./apt-get-update.sh
 apt-get install -y jq
