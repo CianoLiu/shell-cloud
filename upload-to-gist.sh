@@ -17,7 +17,7 @@
 unset http_proxy https_proxy all_proxy
 
 # 安装依赖
-curl -o apt-get-update.sh https://ghproxy.com/https://raw.githubusercontent.com/CianoLiu/shell-cloud/main/apt-get-update.sh
+curl -x "" -o apt-get-update.sh https://ghproxy.cianogame.top/https://raw.githubusercontent.com/CianoLiu/shell-cloud/main/apt-get-update.sh
 chmod +x apt-get-update.sh
 ./apt-get-update.sh
 apt-get install -y jq
